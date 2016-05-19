@@ -1,0 +1,57 @@
+include ./../../layouts/mixin.jade
+
+.site-loader
+
+section#home.site-splash.fullscreen
+    .splash-inner
+        .splash-slider
+            .splash-content
+                .container
+                    .row
+                        .col-md-12
+                            .splash-text
+                                h4.splash-intro
+                                    a(href="#")
+                                        !='Benvenuto ao nosso site!'
+                                h1.splash-headline
+                                    !='Atemporale <span class="text-primary">Design</span>'
+                                .splash-description
+                                    p
+                                        !='Idéias e ações inteligentes que criam novas oportunidades para você e o seu negócio.'
+            .splash-content
+                .container
+                    .row
+                        .col-md-12
+                            .splash-text
+                                h4.splash-intro
+                                    a(href="#")
+                                        !="Criatividade + Estratégia"
+                                h1.splash-headline
+                                    !='Made in Italy<br /><span class="text-primary"> Digital Excellence</span>'
+                                .splash-description
+                                    p
+                                        !='Somos certificados pelo google. Mais uma garantia de qualidade para você!'
+            .splash-content
+                .container
+                    .row
+                        .col-md-12
+                            .splash-text
+                                h4.splash-intro
+                                    a(href="#")
+                                        ="Quem é você?"
+                                h1.splash-headline
+                                   !="Vamos conversar!"
+                                .splash-description
+                                    p
+                                        !='Quer aumentar o número de clientes da sua empresa, mas não sabe como? Clique aqui!'
+
+            .cycle-next
+            .cycle-prev
+
+        .splash-media(data-background!="{{asset('img/home/slide_1.jpg')}}", data-background-xs="demo/img/splash-bg-xs.jpg",data-background-md="demo/img/splash-bg-md.jpg", data-background-lg="demo/img/splash-bg-lg.jpg")
+            .overlay
+        .splash-feedback
+            span.mouse
+                span.fa.fa-angle-down
+            span.caption
+                ='Scroll'

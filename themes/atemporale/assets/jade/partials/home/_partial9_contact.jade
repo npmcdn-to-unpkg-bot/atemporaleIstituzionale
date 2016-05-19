@@ -1,0 +1,54 @@
+#contact.section
+    .section-row-container
+        .section-row.half-padding-bottom
+            .container
+                .row
+                    .col-lg-12
+                        h1.section-title.show-counter
+                            !='Entre em contato<small> e dê o primeiro passo para criar novas oportunidades para o seu negócio!</br> Você pode usar o form abaixo ou se preferir escrever diretamente para info@atemporale.it </small>'
+                .row
+                    .col-md-8
+                        form(method="post", class="form-horizontal contact-form", action="php/contact/contact.php")
+                            // Honeypot SPAM Protection
+                            !='<input type="text" name="cf[honeypot]" style="display: none">'
+                            // END Honeypot SPAM Protection
+                            .form-group
+                                .col-md-6
+                                    !='<input type="text" name="cf[name]" class="form-control required" placeholder="Qual o seu Nome?">'
+
+                                .col-md-6
+                                    !='<input type="email" name="cf[email]" class="form-control required email" placeholder="Qual o seu melhor Email?">'
+
+                            .form-group
+                                .col-md-6
+                                    !='<input type="url" name="cf[url]" class="form-control url" placeholder="Qual o nome da sua Empresa?">'
+
+                                .col-md-6
+                                    !='<input type="text" name="cf[subject" class="form-control required" placeholder="Qual o seu n° de Telefone?">'
+
+                            .form-group
+                                .col-md-12
+                                    !='<textarea name="cf[message]" rows="6" class="form-control required" placeholder="Mensagem"></textarea>'
+
+                            .form-group
+                                .col-md-12
+                                    !='<input type="submit" value="Enviar" class="btn btn-sm btn-block btn-primary">'
+                    .col-md-4
+                        .aside.sidebar
+                            .sidebar-block
+                                p
+                                    !='<strong class="text-semibold">Atemporale Design</strong><br>Rua São Miguel 1629 - Itapoã <br>Belo Horizonte - MG <br>Brasil'
+                            .sidebar-block
+                                p.lead
+                                    i.fa.fa-envelope
+                                    !=' info@atemporale.it'
+                                    br/
+                                    i.fa.fa-phone
+                                    !=' 0055 (31) 3327-4866'
+                                    br/
+                                    i.fa.fa-mobile
+                                    !=' 0055 (31) 9-8247-6893'
+                                                                        
+        .section-row.no-padding-top.no-padding-bottom
+            .google-maps-container
+                .google-maps(data-center="-19.840709,-43.952953", data-markers!="[{&quot;lat&quot;:&quot;-19.840709&quot;,&quot;lng&quot;:&quot;-43.952953&quot;}]", data-zoom="16", data-scrollWheel="false", data-monochrome="true")

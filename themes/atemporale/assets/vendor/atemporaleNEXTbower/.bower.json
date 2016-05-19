@@ -1,0 +1,36 @@
+{
+  "name": "atemporaleNEXTbower",
+  "version": "1.0.3",
+  "description": "A simple frontend configuration for Laravel.",
+  "keywords": [
+    "laravel",
+    "template",
+    "elixir",
+    "less",
+    "bower"
+  ],
+  "homepage": "http://atemporale.next.it",
+  "license": "MIT",
+  "ignore": [],
+  "authors": [
+    "alessandrotraversi <alessandro.traversi@hotmail.it>"
+  ],
+  "main": [
+    "./less/grid_system12.less",
+    "./less/material_design_color_palette.less",
+    "./less/mixin_css3.less",
+    "./less/mixin_posizione.less",
+    "./less/mixin_testo.less",
+    "./less/start.less"
+  ],
+  "moduleType": [],
+  "_release": "1.0.3",
+  "_resolution": {
+    "type": "version",
+    "tag": "1.0.3",
+    "commit": "adbf896176d762e653be45c20cff67b7ca6e4980"
+  },
+  "_source": "git://github.com/AtemporaleNEXT/atemporaleNEXTbower.git",
+  "_target": "~1.0.3",
+  "_originalSource": "atemporaleNEXTbower"
+}

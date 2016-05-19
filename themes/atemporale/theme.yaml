@@ -1,5 +1,30 @@
-name: "Custom public theme"
-description: "Frontend baseline."
+name: "Public theme of Atemporale Design site"
+description: "Static site and blog."
 author: "Atemporale NEXT"
 homepage: "http://atemporale.it"
 code: "custom"
+
+form:
+    fields:
+        site_name:
+            label: Atemporale Design
+            comment: The website name as it should appear on the front-end
+            default: Atemporale Design
+    tabs:
+        fields:
+            meta_title:
+                label: Meta title
+                tab: Metadata
+                comment: Definisci la parte di titolo del sito che rimarrà invariata.
+                default: Atemporale Design -
+
+            meta_keywords:
+                label: Meta keywords
+                comment: Definisci le parole chiave (massimo 5) che saranno in comune a tutte le pagine.
+                tab: Metadata
+
+            meta_description:
+                label: Meta description
+                tab: Metadata
+                default: Atemporale design [...]
+                comment: Definisci la parte di descrizione che sarà incomune per tutto il sito.

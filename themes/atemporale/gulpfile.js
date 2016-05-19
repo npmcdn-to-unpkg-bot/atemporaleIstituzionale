@@ -12,7 +12,6 @@ var gulp = require('gulp'),
     bower = require('gulp-bower'),
     less = require('gulp-less'),
     jade = require('gulp-jade'),
-    path = require('path'),
     del = require('del');
 
 // System var path
@@ -66,7 +65,7 @@ gulp.task('jade', function() {
  |--------------------------------------------------------------------------
  */
 gulp.task('less', function() {
-    return gulp.src(lessDir+'/**/*.less')
+    return gulp.src(lessDir+'/pages/*.less')
         .pipe(less())
         .pipe(autoprefixer('last 2 version'))
         .pipe(gulp.dest(publicCSS))

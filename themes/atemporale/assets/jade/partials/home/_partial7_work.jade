@@ -1,0 +1,238 @@
+section#work.section
+    .section-row-container
+        .section-row
+            .container
+                .row
+                    .col-lg-3
+                        h1.section-title.show-counter
+                            !='Port fólio'
+                            small
+                                !='Conheça nossos projetos recentes e se encante!'
+
+                    .col-lg-8.col-lg-push-1
+                        .row
+                            .col-md-12
+                                p.lead
+                                    !='...... ' 
+
+                    
+        .section-row.no-padding-top
+            .container
+            
+                .row(data-animation-chain-duration="1200")
+                    .col-md-12
+                        .projects
+                            .filter
+                                !='<span class="active-label visible-xs" data-toggle="dropdown">Todos</span>'
+                                ul
+                                    li.active
+                                        a(href="#", data-filter="*")
+                                            !='Todos'
+                                    li
+                                        a(href="#", data-filter=".illustration")
+                                            !='Marcas'
+                                    li
+                                        a(href="#", data-filter=".web-design")
+                                            !='Web Design'
+                                    li
+                                        a(href="#", data-filter=".branding")
+                                            !='Ecodesign e projetos sociais'
+                                    li
+                                        a(href="#", data-filter=".photography")
+                                            !='Outros'
+                            .items
+                                .grid-sizer
+                                .gutter-sizer
+                                .project.branding.web-design(data-animation-name="fadeInDown")
+                                    .project-image
+                                        img(src="{{asset('img/portfolio/min/atemporale_design_portfolio_min1.jpg')}}", alt="")/
+                                        .overlay
+                                            ul.actions
+                                                li.mfp-details
+                                                    a(href!="{{route('public.prog1')}}")
+                                                        i.fa.fa-search
+                                    .project-info
+                                        h4.project-name
+                                            !='Inovar Móveis'
+                                        .project-categories
+                                            !='Branding, Web Design'
+                                
+                                .project.photography.web-design(data-animation-name="fadeInDown")
+                                    .project-image
+                                        img(src="{{asset('img/portfolio/min/atemporale_design_portfolio_min2.jpg')}}", alt="")/
+                                        .overlay
+                                            ul.actions
+                                                
+                                                li.mfp-details
+                                                    a(href!="{{route('public.prog2')}}")
+                                                        i.fa.fa-search
+                                    .project-info
+                                        h4.project-name
+                                            !='Vó Ligia Bolos Caseiros'
+                                        .project-categories
+                                            !='Identidade Visual, papelaria'
+                                
+                                .project.illustration.web-design(data-animation-name="fadeInDown")
+                                    .project-image
+                                        img(src="{{asset('img/portfolio/min/atemporale_design_portfolio_min3.gif')}}", alt="")/
+                                        .overlay
+                                            ul.actions
+                                                
+                                                li.mfp-details
+                                                    a(href!="{{route('public.prog1')}}")
+                                                        i.fa.fa-search
+                                    .project-info
+                                        h4.project-name
+                                            !='Clinica Dentale Bavaria'
+                                        .project-categories
+                                            !='Web Design, ad words'
+                                
+                                .project.photography(data-animation-name="fadeInDown")
+                                    .project-image
+                                        img(src="{{asset('img/portfolio/min/atemporale_design_portfolio_min4.jpg')}}", alt="")/
+                                        .overlay
+                                            u.actions
+                                                
+                                                li.mfp-details
+                                                    a(href!="{{route('public.prog1')}}")
+                                                        i.fa.fa-search
+                                    .project-info
+                                        h4.project-name
+                                            !='MVIn'
+                                        div-project-categories
+                                            !='Web design, Ecodesign, ID Visual'
+                                
+                                .project.branding.photography(data-animation-name="fadeInDown")
+                                    .project-image
+                                        img(src="{{asset('img/portfolio/min/atemporale_design_portfolio_min5.jpg')}}", alt="")/
+                                        .overlay
+                                            ul.actions
+                                                
+                                                li.mfp-details
+                                                    a(href!="{{route('public.prog1')}}")
+                                                        i.fa.fa-search
+                                    .project-info
+                                        h4.project-name
+                                            !='Smokey Eyes Makeup'
+                                        div.project-categories
+                                            !='Branding, Photography'
+                                
+                                .project.web-design(data-animation-name="fadeInDown")
+                                    .project-image
+                                        img(src="{{asset('img/portfolio/min/atemporale_design_portfolio_min6.jpg')}}", alt="")/
+                                        .overlay
+                                            ul.actions
+                                               
+                                                li.mfp-details
+                                                    a(href!="{{route('public.prog1')}}")
+                                                        i.fa.fa-search
+                                    .project-info
+                                        h4.project-name
+                                            !='K.A.C Lipsticks'
+                                        div.project-categories
+                                            !='Web Design'
+                                
+                                .project.photography(data-animation-name="fadeInDown")
+                                    .project-image
+                                        img(src="{{asset('img/portfolio/min/atemporale_design_portfolio_min7.jpg')}}", alt="")/
+                                        .overlay
+                                            ul.actions
+                                                
+                                                li.mfp-details
+                                                    a(href!="{{route('public.prog1')}}")
+                                                        i.fa.fa-search
+                                    .project-info
+                                        h4.project-name
+                                            !='The Pink Lady'
+                                        div.project-categories
+                                            !='Photography'
+                                
+                                .project.illustration.web-design(data-animation-name="fadeInDown")
+                                    .project-image
+                                        img(src="{{asset('img/portfolio/min/atemporale_design_portfolio_min8.jpg')}}", alt="")/
+                                        .overlay
+                                            ul.actions
+                                                
+                                                li.mfp-details
+                                                    a(href!="{{route('public.prog1')}}")
+                                                        i.fa.fa-search
+                                    .project-info
+                                        h4.project-name
+                                            !='Moon farl'
+                                        div.project-categories
+                                            !='Illustration, Web Design'
+                            
+                            .project-load-more
+                                a(href="#")
+                                    i.fa.fa-plus
+        #clients.section-row.no-padding-top.half-padding-bottom
+            .container
+                .row(data-animation-chain-duration="1500")
+                    .col-md-12
+                        h2.section-separator-title.separator-align-left
+                            span(data-shadow-text="Nossos Clientes")
+                                !='Principais Clientes/Parceiros'
+                        p.lead
+                            !='We have worked with some of the worlds biggest brands, along with famous designers, artists, bloggers, and entrepreneurs.'
+                        .client-list
+                            ul
+                                li.client
+                                    .client-logo(data-animation-name="fadeInUp")
+                                        .logo
+                                            a(href="#")
+                                                img(src="{{asset('img/clientes/ae_atemporale_design_brasil1.png')}}", alt="Toyota")/
+                                li.client
+                                    .client-logo(data-animation-name="fadeInUp")
+                                        .logo
+                                            a(href="#")
+                                                img(src="{{asset('img/clientes/ae_atemporale_design_brasil2.png')}}" alt="falette")/
+                                li.client
+                                    .client-logo(data-animation-name="fadeInUp")
+                                        .logo
+                                            a(href="#")
+                                                img(src="{{asset('img/clientes/ae_atemporale_design_brasil3.png')}}", alt="Samsung")/
+                                li.client
+                                    .client-logo(data-animation-name="fadeInUp")
+                                        .logo
+                                            a(href="#")
+                                                img(src="{{asset('img/clientes/ae_atemporale_design_brasil4.png')}}", alt="Nike")/
+                                li.client
+                                    .client-logo(data-animation-name="fadeInUp")
+                                        .logo
+                                            a(href="#")
+                                                img(src="{{asset('img/clientes/ae_atemporale_design_brasil5.png')}}", alt="Toyota")/
+                                li.client
+                                    .client-logo(data-animation-name="fadeInUp")
+                                        .logo
+                                            a(href="#")
+                                                img(src="{{asset('img/clientes/ae_atemporale_design_brasil6.png')}}", alt="Samsung")/
+                                li.client
+                                    .client-logo(data-animation-name="fadeInUp")
+                                        .logo
+                                            a(href="#")
+                                                img(src="{{asset('img/clientes/ae_atemporale_design_italia1.png')}}", alt="Toyota")/
+                                li.client
+                                    .client-logo(data-animation-name="fadeInUp")
+                                        .logo
+                                            a(href="#")
+                                                img(src="{{asset('img/clientes/ae_atemporale_design_italia2.png')}}", alt="Samsung")/
+                                li.client
+                                    .client-logo(data-animation-name="fadeInUp")
+                                        .logo
+                                            a(href="#")
+                                                img(src="{{asset('img/clientes/ae_atemporale_design_italia3.png')}}", alt="Nike")/
+                                li.client
+                                    .client-logo(data-animation-name="fadeInUp")
+                                        .logo
+                                            a(href="#")
+                                                img(src="{{asset('img/clientes/ae_atemporale_design_italia4.png')}}", alt="Nestle")/
+
+
+section.section.th-dark(data-background="demo/parallax/3.jpg", data-background-xs="demo/parallax/3-xs.jpg",data-background-md="demo/parallax/3-md.jpg", data-background-lg="demo/parallax/3-lg.jpg")
+    .section-row-container
+        .section-row.three-quarters-padding-top.three-quarters-padding-bottom
+            .container
+                .row
+                    .col-md-12
+                        .tweet-slider(data-username="envato", data-count="3", data-animation-name="fadeInUp")
+    .section-overlay

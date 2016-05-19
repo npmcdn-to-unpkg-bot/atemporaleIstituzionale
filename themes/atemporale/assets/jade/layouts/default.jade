@@ -1,24 +1,38 @@
 include ./mixin.jade
+
 +infofile('default')
 
 doctype html
-html(lang="pt-br")
+html(class="no-js", lang="pt-br", itemscope itemtype="http://schema.org/CreativeWork", xmlns:og="http://opengraphprotocol.org/schema/", xmlns:fb="http://www.facebook.com/2008/fbml", xmlns:website="http://ogp.me/ns/website", prefix="fb: http://ogp.me/ns/ profile: http://ogp.me/ns/profile#")
     head
+
+        //Meta nameTemplate
+        title
+            !='{{ this.theme.site_name }} - {{ this.page.title }}'
+        meta(name="title", content!="{% if this.page.meta_title %}{{ this.page.meta_title }}{% else %}{{ this.theme.meta_title }}{% endif %}")
+        meta(name="description", content!="{% if this.page.meta_description %}{{ this.page.meta_description }}{% else %}{{ this.theme.meta_description }}{% endif %}")/
+        meta(name="keywords", content!="{{ this.theme.meta_keywords }}")/
+
         meta(charset="utf-8")/
         meta(http-equiv="X-UA-Compatible", content="IE=edge")/
         meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0")/
         meta(name="google", content="notranslate")/
-        meta(name="author", content="Alessandro Traversi, Carolina Amorim Lourenço")/
-        meta(name="application-name", content="Atemporale Design")/
-
-        //Meta nameTemplate
-        +yield('MetaDescription')
-        +yield('MetaKeywords')
+        meta(name="author", content="Atemporale Design, Atemporale NEXT")/
+        meta(name="application-name", content="Atemporale Design - Estratégias Criativas de Comunicação e Design")/
 
         //Meta name og
+        meta(property="og:title", content="Atemporale Design - Estratégias Criativas de Comunicação e Design")/
+        meta(property="og:description", content="Um buon Design é aquele que faz sen-ti-do e gera oportunidades. Todavia, um “Design affascinante” é aquele que, além disso, permanece no tempo sendo ATEMPORAL")/
+        meta(property="og:type", content="website")/
+        meta(property="og:url", content="http://atemporale.it")/
+        meta(property="og:image", content="#")/
+        meta(property="og:determiner", content="the")/
+        meta(property="og:locale", content="pt_BR")/
+        meta(property="fb:app_id", content="#")/
+        meta(name="copyright", content="Atemporale Design")
 
         //Meta name verify
-        meta(name="google-site-verification", content="")/
+        meta(name="google-site-verification", content="#")/
 
         //Favicon.ico
         link(rel="shortcut icon", href!="{{ asset('/img/favicon/favicon.ico') }}", type="image/x-icon")/
@@ -42,19 +56,21 @@ html(lang="pt-br")
 
 
         //Fonts external link
-        link(rel="stylesheet", type='text/css', href="http://fonts.googleapis.com/css?family=Lato:300,400,700%7COpen+Sans:400,300,700")/
+        link(rel="stylesheet", href="http://fonts.googleapis.com/css?family=Raleway:300,400,600,700,300italic,400italic,600italic,700italic|Droid+Serif:400,400italic")/
 
         //Page CSS
         +yield('cssPagina')
+
+
 
     body(itemtype="", itemscope)
         // dinamic content
         +yield('content')
 
 
+        //Librerie js
 
-
-
+        //Librerie hyidrogen
 
         //Script interni per pagina
         +yield('jsPagina')
