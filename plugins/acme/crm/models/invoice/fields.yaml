@@ -1,0 +1,48 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    opportunity_id:
+        label: Id fattura
+        invisible: true
+
+    name:
+        placeholder: Inserisci un nome/titolo per la fattura
+
+    creation:
+        label: Data della fattura
+        type: datepicker
+        mode: date
+
+    duedate:
+        label: Data di scadenza del pagamento
+        type: datepicker
+        mode: date
+
+    terms:
+        label: Termini di pagamento
+
+    payment:
+       label: Stato del pagamento
+       type: dropdown
+       options:
+          Non pagato: Non pagato
+          In pagamento: In pagamento
+          Pagato: Pagato
+
+    causal:
+        label: Causale del pagamento
+        type: richeditor
+
+    amount:
+        label: Valore totale
+
+    tax:
+        label: Tasse/interessi
+
+    discount:
+        label: Sconto
+
+    total:
+        label: Valore finale

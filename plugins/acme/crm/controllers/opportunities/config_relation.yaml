@@ -1,0 +1,61 @@
+# ===================================
+#  Relation Behavior Config
+# ===================================
+
+notes:
+    label: Note
+    view:
+        list: $/acme/crm/models/note/columns.yaml
+        toolbarButtons: create|delete
+    manage:
+        form: $/acme/crm/models/note/fields.yaml
+
+costs:
+    label: Costi
+    view:
+        list: $/acme/crm/models/cost/columns.yaml
+        toolbarButtons: create|add|remove
+    manage:
+        form: $/acme/crm/models/cost/fields.yaml
+
+contacts:
+    label: Contatti
+    view:
+        list: $/acme/crm/models/contact/columns.yaml
+        toolbarButtons: create|add|remove
+    manage:
+        showSearch: true
+        recordsPerPage: 10
+        list: $/acme/crm/models/contact/columns.yaml
+        form: $/acme/crm/models/contact/fields.yaml
+
+collaborators:
+    label: Collaboratori
+    view:
+        list: $/acme/crm/models/collaborator/columns.yaml
+        toolbarButtons: create|delete
+    manage:
+        showSearch: true
+        recordsPerPage: 10
+        list: $/acme/crm/models/collaborator/columns.yaml
+        form: $/acme/crm/models/collaborator/fields.yaml
+
+services:
+    label: Servizi offerti
+    view:
+        list: $/acme/crm/models/service/columns.yaml
+        toolbarButtons: create|delete
+    manage:
+        showSearch: true
+        recordsPerPage: 10
+        list: $/acme/crm/models/service/columns.yaml
+        form: $/acme/crm/models/service/fields.yaml
+
+invoices:
+    label: Fatture
+    view:
+        list: $/acme/crm/models/invoice/columns.yaml
+        toolbarButtons: create|add|remove
+    manage:
+        form: $/acme/crm/models/invoice/fields.yaml
+

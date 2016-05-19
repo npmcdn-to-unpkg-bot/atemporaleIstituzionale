@@ -1,0 +1,20 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+tabs:
+    defaultTab: Generale
+    fields:
+        name:
+            label: Nome categoria
+
+        description:
+            label: Descrizione categoria
+            type: richeditor
+
+        services:
+            label: Servizi offerti
+            type: partial
+            path: field_services
+            tab: Servizi offerti
+

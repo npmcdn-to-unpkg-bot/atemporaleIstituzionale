@@ -1,0 +1,29 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    status:
+        label: Status
+        relation: status
+        select: name
+
+    name:
+        label: Nome
+        searchable: true
+
+    description:
+        label: Descrizione
+        searchable: true
+
+    starting:
+        label: Data inizio
+        type: datetime
+
+    finishing:
+        label: Data fine
+        type: datetime
+
+    closed_at:
+        label: Chiuso
+        type: datetime

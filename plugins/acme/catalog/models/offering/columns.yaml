@@ -1,0 +1,13 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    name:
+        label: Nome categoria
+        searchable: true
+        sortable: true
+
+    description:
+        label: Descrizione categoria
+        sortable: true

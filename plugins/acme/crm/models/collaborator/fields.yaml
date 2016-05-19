@@ -1,0 +1,14 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    owner:
+        label: Nome
+        type: relation
+        nameFrom: last_name
+
+    incarico:
+        label: Incarico
+
+

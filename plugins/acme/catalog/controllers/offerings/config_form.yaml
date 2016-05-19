@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Offering
+
+# Model Form Field configuration
+form: $/acme/catalog/models/offering/fields.yaml
+
+# Model Class name
+modelClass: Acme\Catalog\Models\Offering
+
+# Default redirect location
+defaultRedirect: acme/catalog/offerings
+
+# Create page
+create:
+    title: Create Offering
+    redirect: acme/catalog/offerings/update/:id
+    redirectClose: acme/catalog/offerings
+
+# Update page
+update:
+    title: Edit Offering
+    redirect: acme/catalog/offerings
+    redirectClose: acme/catalog/offerings
+
+# Preview page
+preview:
+    title: Preview Offering

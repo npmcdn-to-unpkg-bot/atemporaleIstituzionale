@@ -1,0 +1,22 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    name:
+        label: Nome
+        searchable: true
+
+    creation:
+        label: Data della fattura
+        type: datetime
+
+    duedate:
+        label: Data di scadenza del pagamento
+        type: datetime
+
+    payment:
+       label: Stato del pagamento
+
+    total:
+        label: Valore finale

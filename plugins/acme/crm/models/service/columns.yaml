@@ -1,0 +1,35 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    name:
+        label: Nome
+        relation: service
+        select: name
+
+    prezzomin:
+        label: Prezzo min
+        relation: service
+        select: prezzomin
+
+    prezzomedio:
+        label: Prezzo medio
+        relation: service
+        select: prezzomedio
+
+    prezzomax:
+        label: Prezzo max
+        relation: service
+        select: prezzomax
+
+    annotations:
+        label: Annotazioni
+
+    status:
+        label: Status del progetto
+
+    owner:
+        label: Referente
+        relation: owner
+        select: last_name

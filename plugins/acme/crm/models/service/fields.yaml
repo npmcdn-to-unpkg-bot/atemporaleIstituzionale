@@ -1,0 +1,27 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    service:
+        label: Nome del servizio
+        type: relation
+        nameFrom: name
+
+    owner:
+        label: Referente
+        type: relation
+        nameFrom: last_name
+
+    annotations:
+        label: Annotazioni
+
+    status:
+        label: Status del progetto
+        span: auto
+        type: dropdown
+
+    owner:
+        label: Nome referente
+        type: relation
+        nameFrom: last_name

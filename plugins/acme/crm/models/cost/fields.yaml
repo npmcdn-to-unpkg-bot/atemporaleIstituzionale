@@ -1,0 +1,27 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    name:
+        placeholder: Inserisci il nome/titolo del costo
+
+    descrizione:
+        label: Descrizione
+        type: richeditor
+
+    valoremin:
+        label: Stima valore minimo
+        type: number
+
+    valoremax:
+        label: Stima valore massimo
+        type: number
+
+    owner:
+        label: Referente del team
+        type: relation
+        nameFrom: first_name
+
+    referente:
+        label: Referente del esterno

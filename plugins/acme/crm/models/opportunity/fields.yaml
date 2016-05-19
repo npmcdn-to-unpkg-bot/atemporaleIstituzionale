@@ -1,0 +1,64 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+tabs:
+    defaultTab: Generale
+    fields:
+        name:
+            label: Titolo
+            comment: Definisci un titolo per la nuova opportunità.
+
+        description:
+            label: Descrizione
+            type: richeditor
+            size: huge
+            tab: Briefing
+
+        # status:
+        #     label: Status
+        #     type: relation
+
+        status:
+            label: Status
+            type: recordfinder
+            list: $/acme/crm/models/status/columns.yaml
+            prompt: Clicca sul %s bottone per trovare lo status
+            nameFrom: name
+            descriptionFrom: probability
+
+        notes:
+            label: Note
+            type: partial
+            path: field_notes
+            tab: Note
+
+        contacts:
+            label: Contatti
+            type: partial
+            path: field_contacts
+            tab: Contatti cliente
+
+        collaborators:
+            label: Collaboratori
+            type: partial
+            path: field_collaborators
+            tab: Contatti collaboratori
+
+        services:
+            label: Servizi offerti
+            type: partial
+            path: field_services
+            tab: Servizi offerti
+
+        costs:
+            label: Costi
+            type: partial
+            path: field_costs
+            tab: Costi per il progetto
+
+        invoices:
+            label: Fatture
+            type: partial
+            path: field_invoices
+            tab: Pagamenti

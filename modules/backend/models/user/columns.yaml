@@ -1,0 +1,27 @@
+# ===================================
+#  Column Definitions
+# ===================================
+
+columns:
+    full_name:
+        label: backend::lang.user.full_name
+        select: concat(first_name, ' ', last_name)
+        searchable: true
+
+    company:
+        label: Azienda
+        searchable: true
+
+    position:
+        label: Posizione
+        searchable: true
+
+    profession:
+        label: Professione
+        searchable: true
+
+    groups:
+        label: backend::lang.user.groups
+        relation: groups
+        select: name
+        sortable: false

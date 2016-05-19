@@ -1,0 +1,16 @@
+# ===================================
+#  Relation Behavior Config
+# ===================================
+
+services:
+    label: Servizi offerti
+    view:
+        list: $/acme/catalog/models/service/columns.yaml
+        toolbarButtons: create|delete
+    manage:
+        showSearch: true
+        recordsPerPage: 10
+        list: $/acme/catalog/models/service/columns.yaml
+        form: $/acme/catalog/models/service/fields.yaml
+
+

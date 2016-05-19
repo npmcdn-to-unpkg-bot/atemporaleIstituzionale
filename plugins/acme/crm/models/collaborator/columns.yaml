@@ -1,0 +1,29 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    full_name:
+        label: Nome
+        relation: owner
+        select: concat(first_name, ' ', last_name)
+
+    company:
+        label: Azienda
+        relation: owner
+        select: company
+
+    position:
+        label: Posizione
+        relation: owner
+        select: position
+
+    profession:
+        label: Professione
+        relation: owner
+        select: profession
+
+    incarico:
+        label: Incarico
+
+
