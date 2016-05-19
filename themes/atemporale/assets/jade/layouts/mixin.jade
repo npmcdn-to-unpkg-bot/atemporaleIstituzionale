@@ -53,10 +53,27 @@ mixin partial(info)
 
 //- twig yield
   Example:  +yield('pages')
-  Compiled: {% pages %}
+  Compiled: {% placeholder pages %}
 mixin yield(info)
     =newline
     =newline
-    | {% #{info} %}
+    | {% placeholder #{info} %}
+    =newline
+    =newline
+
+//- twig section
+  Example:  +section('styles')
+  Compiled: {% put content %}
+mixin section(info)
+    =newline
+    =newline
+    | {% put #{info} %}
+    =newline
+//- twig endsection
+  Example:  +endsection()
+  Compiled: {% endput %}
+mixin endsection()
+    =newline
+    | {% endput %}
     =newline
     =newline
