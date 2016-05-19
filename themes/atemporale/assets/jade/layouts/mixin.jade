@@ -24,7 +24,7 @@ mixin infofile(desc)
             description = ""
             ==
 mixin infopage(title,url,layout,description)
-    | title = "#{title}
+    | title = "#{title}"
     =newline
     | url = "#{url}"
     =newline
@@ -42,41 +42,21 @@ mixin infopage(title,url,layout,description)
 mixin inportfileinfo(info)
     | {{ this.page.#{info} }}
 
-//- twig yield
-  Example:  +yield('content')
-  Compiled: {% block content %}
-            {% endblock %}
-mixin yield(info)
-    | {% block #{info} %}
-    =newline
-    | {% endblock %}
-
-//- twig section
-  Example:  +yield('content')
-  Compiled: {% block content %}
-mixin section(info)
-    | {% block #{info} %}
-//- twig endsection
-  Example:  +yield('content')
-  Compiled: {% block content %}
-mixin endsection()
-    =newline
-    | {% endblock %}
-    =newline
-    =newline
-
-
-//- twig extend
-  Example:  +extends('base.htm')
-  Compiled: {% extends "base.html" %}
-mixin extends(info)
-    | {% extends #{info} %}
-    =newline
-    =newline
-
 //- twig partial
   Example:  +partial('home/base')
   Compiled: {% partial "home/base" %}
 mixin partial(info)
     =newline
-    | {% partial #{info} %}
+    | {% partial "#{info}" %}
+
+
+
+//- twig yield
+  Example:  +yield('pages')
+  Compiled: {% pages %}
+mixin yield(info)
+    =newline
+    =newline
+    | {% #{info} %}
+    =newline
+    =newline

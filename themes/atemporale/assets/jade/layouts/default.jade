@@ -35,37 +35,37 @@ html(class="no-js", lang="pt-br", itemscope itemtype="http://schema.org/Creative
         meta(name="google-site-verification", content="#")/
 
         //Favicon.ico
-        link(rel="shortcut icon", href!="{{ asset('/img/favicon/favicon.ico') }}", type="image/x-icon")/
-        link(rel="apple-touch-icon", sizes="57x57", href!="{{ asset('/img/favicon/apple_touch_icon_57.png') }}")/
-        link(rel="apple-touch-icon", sizes="60x60", href!="{{ asset('/img/favicon/apple_touch_icon_60.png') }}")/
-        link(rel="apple-touch-icon", sizes="72x72", href!="{{ asset('/img/favicon/apple_touch_icon_72.png') }}")/
-        link(rel="apple-touch-icon", sizes="76x76", href!="{{ asset('/img/favicon/apple_touch_icon_76.png') }}")/
-        link(rel="apple-touch-icon", sizes="114x114", href!="{{ asset('/img/favicon/apple_touch_icon_114.png') }}")/
-        link(rel="apple-touch-icon", sizes="120x120", href!="{{ asset('/img/favicon/apple_touch_icon_120.png') }}")/
-        link(rel="apple-touch-icon", sizes="144x144", href!="{{ asset('/img/favicon/apple_touch_icon_144.png') }}")/
-        link(rel="apple-touch-icon", sizes="152x152", href!="{{ asset('/img/favicon/apple_touch_icon_152.png') }}")/
-        link(rel="apple-touch-icon", sizes="180x180", href!="{{ asset('/img/favicon/apple_touch_icon_180.png') }}")/
-        link(rel="icon", type="image/png", href!="{{ asset('/img/favicon/favicon_16.png')}}", sizes= "16x16")/
-        link(rel="icon", type="image/png", href!="{{ asset('/img/favicon/favicon_32.png')}}", sizes= "32x32")/
-        link(rel="icon", type="image/png", href!="{{ asset('/img/favicon/favicon_96.png')}}", sizes= "96x96")/
-        link(rel="icon", type="image/png", href!="{{ asset('/img/favicon/android_chrome_192.png')}}", sizes="192x192")/
-        meta(name="msapplication-square70x70logo", content!="{{ asset('/img/favicon/smalltile.png') }}")/
-        meta(name="msapplication-square150x150logo", content!="{{ asset('/img/favicon/mediumtile.png') }}")/
-        meta(name="msapplication-wide310x150logo", content!="{{ asset('/img/favicon/widetile.png') }}")/
-        meta(name="msapplication-square310x310logo", content!="{{ asset('/img/favicon/largetile.png') }}")/
+        link(rel="shortcut icon", href="images/prod/favicon/favicon.ico", type="image/x-icon")/
+        link(rel="apple-touch-icon", sizes="57x57", href="images/prod/favicon/apple_touch_icon_57.png")/
+        link(rel="apple-touch-icon", sizes="60x60", href="images/prod/favicon/apple_touch_icon_60.png")/
+        link(rel="apple-touch-icon", sizes="72x72", href="images/prod/favicon/apple_touch_icon_72.png")/
+        link(rel="apple-touch-icon", sizes="76x76", href="images/prod/favicon/apple_touch_icon_76.png")/
+        link(rel="apple-touch-icon", sizes="114x114", href="images/prod/favicon/apple_touch_icon_114.png")/
+        link(rel="apple-touch-icon", sizes="120x120", href="images/prod/favicon/apple_touch_icon_120.png")/
+        link(rel="apple-touch-icon", sizes="144x144", href="images/prod/favicon/apple_touch_icon_144.png")/
+        link(rel="apple-touch-icon", sizes="152x152", href="images/prod/favicon/apple_touch_icon_152.png")/
+        link(rel="apple-touch-icon", sizes="180x180", href="images/prod/favicon/apple_touch_icon_180.png")/
+        link(rel="icon", type="image/png", href="images/prod/favicon/favicon_16.png", sizes= "16x16")/
+        link(rel="icon", type="image/png", href="images/prod/favicon/favicon_32.png", sizes= "32x32")/
+        link(rel="icon", type="image/png", href="images/prod/favicon/favicon_96.png", sizes= "96x96")/
+        link(rel="icon", type="image/png", href="images/prod/favicon/android_chrome_192.png", sizes="192x192")/
+        meta(name="msapplication-square70x70logo", conten!="images/prod/favicon/smalltile.png")/
+        meta(name="msapplication-square150x150logo", content="{images/prod/favicon/mediumtile.png")/
+        meta(name="msapplication-wide310x150logo", content="{images/prod/favicon/widetile.png")/
+        meta(name="msapplication-square310x310logo", content="{images/prod/favicon/largetile.png")/
 
 
         //Fonts external link
         link(rel="stylesheet", href="http://fonts.googleapis.com/css?family=Raleway:300,400,600,700,300italic,400italic,600italic,700italic|Droid+Serif:400,400italic")/
 
         //Page CSS
-        +yield('cssPagina')
+        +yield('styles')
 
 
 
     body(itemtype="", itemscope)
         // dinamic content
-        +yield('content')
+        +yield('page')
 
 
         //Librerie js
@@ -73,4 +73,4 @@ html(class="no-js", lang="pt-br", itemscope itemtype="http://schema.org/Creative
         //Librerie hyidrogen
 
         //Script interni per pagina
-        +yield('jsPagina')
+        +yield('scripts')

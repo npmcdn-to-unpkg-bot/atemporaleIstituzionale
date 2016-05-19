@@ -1,13 +1,10 @@
 include ./../layouts/mixin.jade
 +infopage('Homepage','/','default','Pagina iniziale')
 
-+extends('../layout/default.htm')
+mixin onStart()
+    | $this->addCss('assets/css/home.min.css');
+    | $this->addJs('assets/js/app.js');
 
-+section('cssPagina')
-link(rel="stylesheet", href!="css/home.css", type="text/css")/
-+endsection()
-
-+section('content')
 +partial('home/_partial1_intro')
 +partial('home/_partial2_nav')
 .site-wrapper
@@ -20,21 +17,18 @@ link(rel="stylesheet", href!="css/home.css", type="text/css")/
         +partial('home/_partial8_plans')
         +partial('home/_partial9_contact')
     +partial('home/_partial10_footer')
-+endsection()
 
-
-+section('jsPagina')
-script(src="js/dev/components/layout.min.js", type="text/javascript")
-script(src="js/dev/components/hydrogen.min.js", type="text/javascript")
-script(src="js/devpages/home.min.js", type="text/javascript")
-script(src="vendor/html5shiv/dist/html5shiv.min.js", type="text/javascript")
-script(src="vendor/jquery/dist/jquery.min.js", type="text/javascript")
-script(src="vendor/royalslider/jquery.royalslider.min.js", type="text/javascript")
-script(src="vendor/mfp/jquery.mfp-0.9.9.min.js", type="text/javascript")
-script(src="vendor/mediaelement/build/mediaelement-and-player.min.js", type="text/javascript")
-script(src="vendor/gmap3/dist/gmap3.min.js", type="text/javascript")
-script(src="vendor/owlcarousel/owl-carousel/owl.carousel.min.js", type="text/javascript")
-script(src="vendor/isotope/dist/isotope.pkgd.min.js", type="text/javascript")
-script(src="vendor/jquery-form/jquery.form.js", type="text/javascript")
-script(src="vendor/jquery-validation/dist/jquery.validate.min.js", type="text/javascript")
-+endsection()
+//
+    script(src="js/dev/components/layout.min.js", type="text/javascript")
+    script(src="js/dev/components/hydrogen.min.js", type="text/javascript")
+    script(src="js/devpages/home.min.js", type="text/javascript")
+    script(src="vendor/html5shiv/dist/html5shiv.min.js", type="text/javascript")
+    script(src="vendor/jquery/dist/jquery.min.js", type="text/javascript")
+    script(src="vendor/royalslider/jquery.royalslider.min.js", type="text/javascript")
+    script(src="vendor/mfp/jquery.mfp-0.9.9.min.js", type="text/javascript")
+    script(src="vendor/mediaelement/build/mediaelement-and-player.min.js", type="text/javascript")
+    script(src="vendor/gmap3/dist/gmap3.min.js", type="text/javascript")
+    script(src="vendor/owlcarousel/owl-carousel/owl.carousel.min.js", type="text/javascript")
+    script(src="vendor/isotope/dist/isotope.pkgd.min.js", type="text/javascript")
+    script(src="vendor/jquery-form/jquery.form.js", type="text/javascript")
+    script(src="vendor/jquery-validation/dist/jquery.validate.min.js", type="text/javascript")
