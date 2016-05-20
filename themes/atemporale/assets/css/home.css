@@ -1,3 +1,4 @@
+@import "../../vendor/bootstrap/dist/css/bootstrap.min.css";
 @font-face {
   font-family: 'Glyphicons Halflings';
   src: url('../fonts/glyphicons-halflings-regular.eot');
@@ -5110,7 +5111,7 @@ ul.check-list li:before {
 .rsHydrogen .rsPreloader {
   width: 32px;
   height: 32px;
-  background-image: url("../img/preload.gif");
+  background-image: url("/themes/atemporale/assets/images/dev/preload.gif");
   background-position: 50%;
   background-repeat: no-repeat;
   left: 50%;
@@ -5120,7 +5121,7 @@ ul.check-list li:before {
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .rsHydrogen .rsPreloader {
-    background-image: url("../img/preload@2x.gif");
+    background-image: url("/themes/atemporale/assets/images/dev/preload@2x.gif");
     background-size: 32px 32px;
   }
 }
@@ -5875,11 +5876,11 @@ ul.check-list li:before {
 }
 .macbook-slider {
   padding-bottom: 58.97435897%;
-  background-image: url("../img/macbook.png");
+  background-image: url("/themes/atemporale/assets/images/dev/macbook.png");
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .macbook-slider {
-    background-image: url("../img/macbook@2x.png");
+    background-image: url("/themes/atemporale/assets/images/dev/macbook@2x.png");
     background-size: 100% 100%;
   }
 }
@@ -5891,11 +5892,11 @@ ul.check-list li:before {
 }
 .iphone-slider {
   padding-bottom: 47.60683761%;
-  background-image: url("../img/iphone.png");
+  background-image: url("/themes/atemporale/assets/images/dev/iphone.png");
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .iphone-slider {
-    background-image: url("../img/iphone@2x.png");
+    background-image: url("/themes/atemporale/assets/images/dev/iphone@2x.png");
     background-size: 100% 100%;
   }
 }
@@ -5907,11 +5908,11 @@ ul.check-list li:before {
 }
 .ipad-slider {
   padding-bottom: 67.94871795%;
-  background-image: url("../img/ipad.png");
+  background-image: url("/themes/atemporale/assets/images/dev/ipad.png");
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .ipad-slider {
-    background-image: url("../img/ipad@2x.png");
+    background-image: url("/themes/atemporale/assets/images/dev/ipad@2x.png");
     background-size: 100% 100%;
   }
 }
@@ -5993,7 +5994,7 @@ ul.check-list li:before {
 .photoset {
   min-height: 200px;
   overflow: hidden;
-  background-image: url("../img/preload.gif");
+  background-image: url("/themes/atemporale/assets/images/dev/preload.gif");
   background-position: 50%;
   background-repeat: no-repeat;
 }
@@ -6007,7 +6008,7 @@ ul.check-list li:before {
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .photoset {
-    background-image: url("../img/preload@2x.gif");
+    background-image: url("/themes/atemporale/assets/images/dev/preload@2x.gif");
     background-size: 32px 32px;
   }
 }
@@ -6842,11 +6843,11 @@ ul.check-list li:before {
   background-position: 50%;
   background-repeat: no-repeat;
   text-align: center;
-  background-image: url("../img/preload.gif");
+  background-image: url("/themes/atemporale/assets/images/dev/preload.gif");
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .mejs-overlay-loading {
-    background-image: url("../img/preload@2x.gif");
+    background-image: url("/themes/atemporale/assets/images/dev/preload@2x.gif");
     background-size: 32px 32px;
   }
 }
