@@ -1,0 +1,42 @@
+include ./../../layouts/mixin.jade
+section#pricing.section
+    .section-row-container
+        .section-row
+            .container
+                .row
+                    .col-lg-12
+                        +content('home/plaintitle.htm')
+
+                .row
+                    .col-md-4
+                        .pricing-table(data-animation-name="flipInY")
+                            +content('home/plain1.htm')
+                            a.btn.btn-sm.btn-primary.btn-block(href="#")
+                                !='Sign Up'
+                    .col-md-4
+                        .pricing-table.featured(data-animation-name="flipInY")
+                            +content('home/plain1.htm')
+                            a.btn.btn-sm.btn-primary.btn-block(href="#")
+                                !='Sign Up'
+                    .col-md-4
+                        .pricing-table(data-animation-name="flipInY")
+                            +content('home/plain3.htm')
+                            a.btn.btn-sm.btn-primary.btn-block(href="#")
+                                !='Sign Up'
+section.section.th-dark
+    .section-row-container
+        .section-row
+            .container
+                .row(data-animation-chain-duration="800")
+                    .col-md-8.col-md-push-2
+                        .call-to-action.centered.unboxed.no-margin-bottom
+                            .call-to-action-inner
+                                +content('home/finalcalltoaction.htm')
+
+    .section-overlay
+    .section-media.section-media-video(style="background-image: url(/themes/atemporale/assets/images/dev/first-frame.jpg);")
+        video(style="width: 100%; height: 100%;", loop, autoplay)
+            // WebM/VP8 for Firefox4, Opera, and Chrome
+            source(type="video/webm", src="demo/videos/splash.webm")/
+            // MP4 for Safari, IE9, iPhone, iPad, Android, and Windows Phone 7
+            source(type="video/mp4", src="demo/videos/splash.mp4")/

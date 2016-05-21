@@ -1,0 +1,13 @@
+include ./../../layouts/mixin.jade
+header.site-header
+    .header-inner
+        .container
+            .row
+                .header-table.col-md-12
+                    .header-col.brand
+                        a(href="#")
+                            +content('layout/navlogo.htm')
+                    .header-col.main-nav
+                        a.nav-toggle(href="#")
+                        ul.nav
+                            +content('layout/navmenu.htm')

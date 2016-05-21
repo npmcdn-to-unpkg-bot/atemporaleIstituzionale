@@ -1,0 +1,121 @@
+include ./../../layouts/mixin.jade
+section#work.section
+    .section-row-container
+        .section-row
+            .container
+                .row
+                    .col-lg-3
+                        +content('home/portfoliosx.htm')
+
+                    .col-lg-8.col-lg-push-1
+                        .row
+                            .col-md-12
+                                +content('home/portfoliodx.htm')
+
+        .section-row.no-padding-top
+            .container
+            
+                .row(data-animation-chain-duration="1200")
+                    .col-md-12
+                        .projects
+                            .filter
+                                !='<span class="active-label visible-xs" data-toggle="dropdown">Todos</span>'
+                                ul
+                                    +content('home/portfoliolist.htm')
+
+                            .items
+                                .grid-sizer
+                                .gutter-sizer
+                                .project.branding.web-design(data-animation-name="fadeInDown")
+                                    +content('home/prog1.htm')
+
+                                .project.photography.web-design(data-animation-name="fadeInDown")
+                                    +content('home/prog2.htm')
+
+                                .project.illustration.web-design(data-animation-name="fadeInDown")
+                                    +content('home/prog3.htm')
+
+                                .project.photography(data-animation-name="fadeInDown")
+                                    +content('home/prog4.htm')
+
+                                .project.branding.photography(data-animation-name="fadeInDown")
+                                    +content('home/prog5.htm')
+
+                                .project.web-design(data-animation-name="fadeInDown")
+                                    +content('home/prog6.htm')
+
+                                .project.photography(data-animation-name="fadeInDown")
+                                    +content('home/prog7.htm')
+
+                                .project.illustration.web-design(data-animation-name="fadeInDown")
+                                    +content('home/prog8.htm')
+
+                            .project-load-more
+                                a(href="#")
+                                    i.fa.fa-plus
+        #clients.section-row.no-padding-top.half-padding-bottom
+            .container
+                .row(data-animation-chain-duration="1500")
+                    .col-md-12
+                        +content('home/clienttitle.htm')
+
+                        .client-list
+                            ul
+                                li.client
+                                    .client-logo(data-animation-name="fadeInUp")
+                                        .logo
+                                            +content('home/client1.htm')
+
+                                li.client
+                                    .client-logo(data-animation-name="fadeInUp")
+                                        .logo
+                                            +content('home/client2.htm')
+
+                                li.client
+                                    .client-logo(data-animation-name="fadeInUp")
+                                        .logo
+                                            +content('home/client3.htm')
+
+                                li.client
+                                    .client-logo(data-animation-name="fadeInUp")
+                                        .logo
+                                            +content('home/client4.htm')
+
+                                li.client
+                                    .client-logo(data-animation-name="fadeInUp")
+                                        .logo
+                                            +content('home/client5.htm')
+
+                                li.client
+                                    .client-logo(data-animation-name="fadeInUp")
+                                        .logo
+                                            +content('home/client6.htm')
+
+                                li.client
+                                    .client-logo(data-animation-name="fadeInUp")
+                                        .logo
+                                            +content('home/client7.htm')
+
+                                li.client
+                                    .client-logo(data-animation-name="fadeInUp")
+                                        .logo
+                                            +content('home/client8.htm')
+
+                                li.client
+                                    .client-logo(data-animation-name="fadeInUp")
+                                        .logo
+                                            +content('home/client9.htm')
+
+                                li.client
+                                    .client-logo(data-animation-name="fadeInUp")
+                                        .logo
+                                            +content('home/client10.htm')
+
+section.section.th-dark(data-background="/themes/atemporale/assets/images/dev/parallax/3.jpg", data-background-xs="/themes/atemporale/assets/images/dev/parallax/3-xs.jpg",data-background-md="/themes/atemporale/assets/images/dev/parallax/3-md.jpg", data-background-lg="/themes/atemporale/assets/images/dev/parallax/3-lg.jpg")
+    .section-row-container
+        .section-row.three-quarters-padding-top.three-quarters-padding-bottom
+            .container
+                .row
+                    .col-md-12
+                        .tweet-slider(data-username="envato", data-count="3", data-animation-name="fadeInUp")
+    .section-overlay

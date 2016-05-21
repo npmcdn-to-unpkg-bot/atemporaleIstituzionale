@@ -1,0 +1,31 @@
+include ./../../layouts/mixin.jade
+section#about.section
+    .section-row-container
+        .section-row
+            .container
+                .row
+                    .col-lg-3
+                        h1.section-title.show-counter
+                            +content('home/whowearesx.htm')
+
+                    .col-lg-8.col-lg-push-1
+                        .row
+                            .col-md-12
+                                +content('home/whowearedxdesc.htm')
+
+                        +content('home/whowearedx4.htm')
+
+                        
+    .section-row.no-padding-top
+        .container
+            .row
+                .col-md-8.col-md-push-4
+                    h2.section-separator-title
+                        +content('home/whoweareequipetitle.htm')
+
+            .row
+                .col-md-8.col-md-push-4
+                    +content('home/whoweareequipedesc.htm')
+
+            .row
+                +content('home/whoweareequipelist.htm')

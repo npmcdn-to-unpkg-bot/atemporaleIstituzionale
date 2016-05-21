@@ -77,3 +77,13 @@ mixin endsection()
     | {% endput %}
     =newline
     =newline
+
+//- twig content
+  Example:  +content('pages/home.htm')
+  Compiled: {% content "pages/home.htm" %}
+mixin content(info)
+    =newline
+    =newline
+    | {% content "#{info}" %}
+    =newline
+    =newline

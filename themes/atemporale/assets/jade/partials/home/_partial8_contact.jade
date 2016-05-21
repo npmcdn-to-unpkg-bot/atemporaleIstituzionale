@@ -1,0 +1,44 @@
+include ./../../layouts/mixin.jade
+#contact.section
+    .section-row-container
+        .section-row.half-padding-bottom
+            .container
+                .row
+                    .col-lg-12
+                        +content('home/contacttitle.htm')
+
+                .row
+                    .col-md-8
+                        form(method="post", class="form-horizontal contact-form", action="php/contact/contact.php")
+                            // Honeypot SPAM Protection
+                            !='<input type="text" name="cf[honeypot]" style="display: none">'
+                            // END Honeypot SPAM Protection
+                            .form-group
+                                .col-md-6
+                                    !='<input type="text" name="cf[name]" class="form-control required" placeholder="Qual o seu Nome?">'
+
+                                .col-md-6
+                                    !='<input type="email" name="cf[email]" class="form-control required email" placeholder="Qual o seu melhor Email?">'
+
+                            .form-group
+                                .col-md-6
+                                    !='<input type="url" name="cf[url]" class="form-control url" placeholder="Qual o nome da sua Empresa?">'
+
+                                .col-md-6
+                                    !='<input type="text" name="cf[subject" class="form-control required" placeholder="Qual o seu n° de Telefone?">'
+
+                            .form-group
+                                .col-md-12
+                                    !='<textarea name="cf[message]" rows="6" class="form-control required" placeholder="Mensagem"></textarea>'
+
+                            .form-group
+                                .col-md-12
+                                    !='<input type="submit" value="Enviar" class="btn btn-sm btn-block btn-primary">'
+                    .col-md-4
+                        .aside.sidebar
+                            +content('home/contacttitle.htm')
+
+                                                                        
+        .section-row.no-padding-top.no-padding-bottom
+            .google-maps-container
+                .google-maps(data-center="-19.840709,-43.952953", data-markers!="[{&quot;lat&quot;:&quot;-19.840709&quot;,&quot;lng&quot;:&quot;-43.952953&quot;}]", data-zoom="16", data-scrollWheel="false", data-monochrome="true")

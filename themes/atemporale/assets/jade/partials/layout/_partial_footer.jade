@@ -1,0 +1,48 @@
+include ./../../layouts/mixin.jade
+footer.site-footer
+  .footer-logo
+    .container
+      .row
+        .col-md-12
+          a(href="#")
+            +content('layout/footerlogo.htm')
+
+  // inizio nascosto
+  .footer-widgets
+    .container
+      .row
+        .col-md-4
+          +content('layout/footerdesc.htm')
+
+        .col-md-4
+          +content('layout/footerservice.htm')
+
+        .col-md-4
+          +content('layout/footerproject.htm')
+
+  // fine nascosto
+
+  .footer-bottom
+    .container
+      .row
+        .col-md-12
+          .footer-text
+            +content('layout/footercc.htm')
+
+          .social-list
+            ul
+              li
+                a(href="https://www.facebook.com/AtemporaleDesign/")
+                  i.fa.fa-facebook
+              li
+                a( href="https://twitter.com/Atemporale_D")
+                  i.fa.fa-twitter
+              li
+                a( href="https://www.instagram.com/atemporaledesign/")
+                  i.fa.fa-instagram
+              li
+                a( href="https://plus.google.com/+AtemporaleD/posts?hl=en")
+                  i.fa.fa-google-plus
+              li
+                a( href="https://github.com/AtemporaleNEXT")
+                  i.fa.fa-github
