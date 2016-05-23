@@ -1,5 +1,5 @@
-include ./../layouts/mixin.jade
-+infopage('Homepage','/','homepage','Pagina iniziale')
+include ./../../layouts/mixin.jade
++infopage('Homepage','/prog','default','Pagina iniziale')
 +endinfofile()
 
 +section('styles')
@@ -21,19 +21,4 @@ script(src="/themes/atemporale/assets/vendor/owlcarousel/owl-carousel/owl.carous
 script(src="/themes/atemporale/assets/vendor/isotope/dist/isotope.pkgd.min.js", type="text/javascript")
 script(src="/themes/atemporale/assets/vendor/jquery-form/jquery.form.js", type="text/javascript")
 script(src="/themes/atemporale/assets/vendor/jquery-validation/dist/jquery.validate.min.js", type="text/javascript")
-+endsection()
-
-+section('pages')
-+partial('home/_partial1_intro')
-+partial('layout/_partial_nav')
-.site-wrapper
-    .site-body
-        +partial('home/_partial2_whoweare')
-            +partial('home/_partial3_culture')
-        +partial('home/_partial4_testimonialandservices')
-        +partial('home/_partial5_blog')
-        +partial('home/_partial6_work')
-        +partial('home/_partial7_plans')
-        +partial('home/_partial8_contact')
-    +partial('layout/_partial_footer')
 +endsection()

@@ -1,6 +1,10 @@
-include ./../layouts/mixin.jade
-+infopage('Homepage','/','homepage','Pagina iniziale')
+include ./../../layouts/mixin.jade
++infopage('interdisciplinares','/blog/interdisciplinares','default','Lista dei posts')
+
++infocomponent('blogPosts')
++optionblogcomponent('page','','10','No posts found','published_at desc','blog/category','blog/post')
 +endinfofile()
+
 
 +section('styles')
 link(href="/themes/atemporale/assets/css/home.min.css", rel="stylesheet")/
@@ -24,16 +28,23 @@ script(src="/themes/atemporale/assets/vendor/jquery-validation/dist/jquery.valid
 +endsection()
 
 +section('pages')
-+partial('home/_partial1_intro')
-+partial('layout/_partial_nav')
-.site-wrapper
-    .site-body
-        +partial('home/_partial2_whoweare')
-            +partial('home/_partial3_culture')
-        +partial('home/_partial4_testimonialandservices')
-        +partial('home/_partial5_blog')
-        +partial('home/_partial6_work')
-        +partial('home/_partial7_plans')
-        +partial('home/_partial8_contact')
-    +partial('layout/_partial_footer')
+section.section
+    .section-row-container
+        .section-row.three-quarters-padding-bottom
+            .container
+                .row
+                    .col-md-12
+                        +content('blog/interdisciplinares.htm')
+
+        .section-row.no-padding-top
+            .container
+                .row
+                    .col-md-12
+                        .posts-wrap.post-list
+                            +component('blogPosts')
+                        ul.pager
+                            li.previous
+                                a(href='#')
+                                    i.fa.fa-angle-left
+
 +endsection()

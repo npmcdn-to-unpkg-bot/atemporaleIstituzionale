@@ -1,6 +1,5 @@
 include ./mixin.jade
-
-+infofile('default')
++infofile('homepage')
 +endinfofile()
 
 doctype html
@@ -63,11 +62,5 @@ html(class="no-js", lang="pt-br", itemscope itemtype="http://schema.org/Creative
         +yield('styles')
 
     body(itemtype="", itemscope)
-        +partial('layout/_partial_nav')
-        .site-wrapper
-            .site-body
-                +yield('pages')
-            +partial('layout/_partial_footer')
-
-
+        +yield('pages')
         +yield('scripts')

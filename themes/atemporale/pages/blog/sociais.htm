@@ -1,7 +1,18 @@
-title = "Homepage"
-url = "/"
-layout = "homepage"
-description = "Pagina iniziale"
+title = "sociais"
+url = "/blog/sociais"
+layout = "default"
+description = "Lista dei posts"
+
+
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+categoryFilter = ""
+postsPerPage = 10
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "blog/category"
+postPage = "blog/post"
 
 
 ==
@@ -36,18 +47,38 @@ description = "Pagina iniziale"
 
 {% put pages %}
 
-{% partial "home/_partial1_intro" %}
-{% partial "layout/_partial_nav" %}
-<div class="site-wrapper">
-  <div class="site-body">
-{% partial "home/_partial2_whoweare" %}
-{% partial "home/_partial4_testimonialandservices" %}
-{% partial "home/_partial5_blog" %}
-{% partial "home/_partial6_work" %}
-{% partial "home/_partial7_plans" %}
-{% partial "home/_partial8_contact" %}
+<section class="section">
+  <div class="section-row-container">
+    <div class="section-row three-quarters-padding-bottom">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+
+{% content "blog/sociais.htm" %}
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section-row no-padding-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="posts-wrap post-list">
+
+{% component "blogPosts" %}
+
+
+            </div>
+            <ul class="pager">
+              <li class="previous"><a href="#"><i class="fa fa-angle-left"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-{% partial "layout/_partial_footer" %}
-</div>
+</section>
 {% endput %}
 
