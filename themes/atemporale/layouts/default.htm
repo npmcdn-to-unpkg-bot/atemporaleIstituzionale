@@ -1,6 +1,12 @@
 description = "default"
 
 
+
+[session]
+security = "all"
+redirect = ""
+
+
 ==
 <!DOCTYPE html>
 <html lang="pt-br" itemscope itemtype="http://schema.org/CreativeWork" xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:website="http://ogp.me/ns/website" prefix="fb: http://ogp.me/ns/ profile: http://ogp.me/ns/profile#" class="no-js">
@@ -57,7 +63,46 @@ description = "default"
 
   </head>
   <body itemtype="" itemscope>
-{% partial "layout/_partial_nav" %}
+    <div id="fb-root">
+      <script>
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.6&appId=1172179922816213";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+        
+      </script>
+    </div>
+
+{% placeholder eventuals %}
+
+
+    <header class="site-header">
+      <div class="header-inner">
+        <div class="container">
+          <div class="row">
+            <div class="header-table col-md-12">
+              <div class="header-col brand"><a href="#">
+
+{% content "layout/navlogo.htm" %}
+
+</a></div>
+              <div class="header-col main-nav"><a href="#" class="nav-toggle"></a>
+                <ul class="nav">
+
+{% content "layout/navmenu.htm" %}
+
+
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
     <div class="site-wrapper">
       <div class="site-body">
 
@@ -65,7 +110,68 @@ description = "default"
 
 
       </div>
-{% partial "layout/_partial_footer" %}
+      <footer class="site-footer">
+        <div class="footer-logo">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12"><a href="#">
+
+{% content "layout/footerlogo.htm" %}
+
+</a></div>
+            </div>
+          </div>
+        </div>
+        <!-- inizio nascosto-->
+        <div class="footer-widgets">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-4">
+
+{% content "layout/footerdesc.htm" %}
+
+
+              </div>
+              <div class="col-md-4">
+
+{% content "layout/footerservice.htm" %}
+
+
+              </div>
+              <div class="col-md-4">
+
+{% content "layout/footerproject.htm" %}
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- fine nascosto-->
+        <div class="footer-bottom">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="footer-text">
+
+{% content "layout/footercc.htm" %}
+
+
+                </div>
+                <div class="social-list">
+                  <ul>
+                    <li><a href="https://www.facebook.com/AtemporaleDesign/"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="https://twitter.com/Atemporale_D"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="https://www.instagram.com/atemporaledesign/"><i class="fa fa-instagram"></i></a></li>
+                    <li><a href="https://plus.google.com/+AtemporaleD/posts?hl=en"><i class="fa fa-google-plus"></i></a></li>
+                    <li><a href="https://github.com/AtemporaleNEXT"><i class="fa fa-github"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
 
 {% placeholder scripts %}

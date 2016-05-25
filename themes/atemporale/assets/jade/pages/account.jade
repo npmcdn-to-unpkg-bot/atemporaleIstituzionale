@@ -1,8 +1,9 @@
-include ./../../layouts/mixin.jade
-+infopage('sociais','/blog/sociais','default','Lista dei posts')
+include ./../layouts/mixin.jade
++infopage('account','/account','default','Pagina di accesso al profilo personale')
+!='is_hidden = 0'
 
-+infocomponent('blogPosts')
-+optionblogcomponent('page','','10','No posts found','published_at desc','blog/category','blog/post')
++infocomponent('account')
++optionlogincomponent('','code')
 +endinfofile()
 
 
@@ -37,19 +38,9 @@ section.section
     .section-row-container
         .section-row.three-quarters-padding-bottom
             .container
-                .row
-                    .col-md-12
-                        +content('blog/sociais.htm')
-
+                +content('private/logintitle')
         .section-row.no-padding-top
             .container
                 .row
-                    .col-md-12
-                        .posts-wrap.post-list
-                            +component('blogPosts')
-                        ul.pager
-                            li.previous
-                                a(href='#')
-                                    i.fa.fa-angle-left
-
+                    +component('account')
 +endsection()

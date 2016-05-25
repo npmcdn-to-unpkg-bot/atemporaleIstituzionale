@@ -15,4 +15,6 @@
     <li><a href="/blog/interdisciplinares">Interdisciplinares</a></li>
     <li><a href="/blog/uncategorized">Uncategorized</a></li>
   </ul>
-</li>
+</li>{% if user %}
+<li><a href="#" data-request="onLogout">Logout</a></li>{% endif %}
+<li><a href="/account">Area clienti</a></li>

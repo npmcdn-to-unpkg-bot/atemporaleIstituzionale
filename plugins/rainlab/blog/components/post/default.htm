@@ -1,20 +1,140 @@
 {% set post = __SELF__.post %}
 
-<div class="content">{{ post.content_html|raw }}</div>
-
-{% if post.featured_images.count %}
-    <div class="featured-images text-center">
-        {% for image in post.featured_images %}
-            <p>
-                <img
-                    data-src="{{ image.filename }}"
-                    src="{{ image.path }}"
-                    alt="{{ image.description }}"
-                    style="max-width: 100%" />
-            </p>
-        {% endfor %}
+<section class="section">
+    <div class="section-row-container">
+        <div class="section-row three-quarters-padding-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-push-2">
+                        <h1 class="page-title text-center">
+                            {{ post.title }}
+                            <small>by <a href="#">{{ post.user.first_name }} {{ post.user.last_name }}</a>
+                                ({{ post.user.profession }} no <a href="#">{{ post.user.company }}</a>)
+                                {{ post.published_at|date('M d, Y') }}
+                            </small>
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section-row no-padding-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <article class="post">
+                            <div class="post-inner row">
+                                <div class="post-media col-md-12">
+                                    <div class="media">
+                                        <figure>
+                                            <img data-src="{{ image.filename }}" src="{{ image.path }}" alt="{{ image.description }}" />
+                                        </figure>
+                                        <div class="overlay">
+                                            <ul>
+                                                <li class="mfp-zoom">
+                                                    <a href="demo/blog/big/surf.jpg">
+                                                        <i class="gi gi-resize-full"></i>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="post-content col-md-12">
+                                    <div class="post-body">
+                                        <p class="content">
+                                            {{ post.content_html|raw }}
+                                        </p>
+                                        <div class="post-tags">
+                                            <blockquote>
+                                                <small>
+                                                    <span class="tags-label">Posted:</span>
+                                                    {% if post.categories.count %} in
+                                                    {% for category in post.categories %}
+                                                    <a href="{{ category.url }}">{{ category.name }}</a>{% if not loop.last %}, {% endif %}
+                                                    {% endfor %}
+                                                    {% endif %}
+                                                    by <a href="#">{{ post.user.first_name }} {{ post.user.last_name }}</a>
+                                                    ({{ post.user.profession }} no <a href="#">{{ post.user.company }}</a>)
+                                                    on {{ post.published_at|date('M d, Y') }}
+                                                </small>
+                                            </blockquote>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <div class="post-author">
+                            <div class="author-description">
+                                <h4 class="text-highlight text-uppercase">Share</h4>
+                                {% component 'ssbuttonsssb' %}
+                            </div>
+                        </div>
+                        <div class="post-comments">
+                            <div class="fb-comment-embed" data-href="http://atemporale.it/blog/post/:slug" data-include-parent="false"></div>
+                        </div>
+                    </div>
+                    <aside class="sidebar col-md-4">
+                        <!--<div class="sidebar-block">
+                            <h4 class="sidebar-title">Text Widget</h4>
+                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+                        </div>-->
+                        <div class="sidebar-block">
+                            <h4 class="sidebar-title">Categories</h4>
+                            <ul>
+                                <li>
+                                    <a href="/blog">Mais novos</a>
+                                </li>
+                                <li>
+                                    <a href="/blog/identidade">Identidade visual</a>
+                                </li>
+                                <li>
+                                    <a href="/blog/webdesign">Webdesign</a>
+                                </li>
+                                <li>
+                                    <a href="/blog/marketing">Marketing digital</a>
+                                </li>
+                                <li>
+                                    <a href="/blog/ecodesign">Ecodesign</a>
+                                </li>
+                                <li>
+                                    <a href="/blog/sociais">Projetos sociais</a>
+                                </li>
+                                <li>
+                                    <a href="/blog/interdisciplinares">Interdisciplinares</a>
+                                </li>
+                                <li>
+                                    <a href="/blog/uncategorized">Uncategorized</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="sidebar-block">
+                            <h4 class="sidebar-title">Mais popular</h4>
+                            <ul>
+                                <li>
+                                    <a href="/blog">Mais novos</a>
+                                </li>
+                                <li>
+                                    <a href="/blog/identidade">Identidade visual</a>
+                                </li>
+                                <li>
+                                    <a href="/blog/webdesign">Webdesign</a>
+                                </li>
+                                <li>
+                                    <a href="/blog/marketing">Marketing digital</a>
+                                </li>
+                                <li>
+                                    <a href="/blog/ecodesign">Ecodesign</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </div>
     </div>
-{% endif %}
+</section>
+
+<!--
 
 <p class="info">
     Posted
@@ -25,3 +145,4 @@
     {% endif %}
     on {{ post.published_at|date('M d, Y') }}
 </p>
+-->

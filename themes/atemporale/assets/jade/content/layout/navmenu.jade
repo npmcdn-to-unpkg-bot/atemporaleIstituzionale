@@ -42,3 +42,13 @@ li
         li
             a(href!="/blog/uncategorized")
                 ='Uncategorized'
+
+!='{% if user %}'
+    li
+        a(href="#", data-request="onLogout")
+            !='Logout'
+!='{% endif %}'
+
+li
+    a(href="/account")
+        !='Area clienti'

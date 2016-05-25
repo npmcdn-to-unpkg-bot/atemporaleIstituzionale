@@ -1,6 +1,8 @@
 include ./mixin.jade
 
 +infofile('default')
++infocomponent('session')
++optionsessioncomponent('all','')
 +endinfofile()
 
 doctype html
@@ -63,11 +65,90 @@ html(class="no-js", lang="pt-br", itemscope itemtype="http://schema.org/Creative
         +yield('styles')
 
     body(itemtype="", itemscope)
-        +partial('layout/_partial_nav')
+        #fb-root
+            script.
+                (function (d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0];
+                    if (d.getElementById(id)) return;
+                    js = d.createElement(s);
+                    js.id = id;
+                    js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.6&appId=1172179922816213";
+                    fjs.parentNode.insertBefore(js, fjs);
+                }(document, 'script', 'facebook-jssdk'));
+
+        +yield('eventuals')
+
+        header.site-header
+            .header-inner
+                .container
+                    .row
+                        .header-table.col-md-12
+                            .header-col.brand
+                                a(href="#")
+                                    +content('layout/navlogo.htm')
+                            .header-col.main-nav
+                                a.nav-toggle(href="#")
+                                ul.nav
+                                    +content('layout/navmenu.htm')
+
+
+
+
         .site-wrapper
             .site-body
                 +yield('pages')
-            +partial('layout/_partial_footer')
+
+
+
+
+
+            footer.site-footer
+                .footer-logo
+                    .container
+                        .row
+                            .col-md-12
+                                a(href="#")
+                                    +content('layout/footerlogo.htm')
+
+                // inizio nascosto
+                .footer-widgets
+                    .container
+                        .row
+                            .col-md-4
+                                +content('layout/footerdesc.htm')
+
+                            .col-md-4
+                                +content('layout/footerservice.htm')
+
+                            .col-md-4
+                                +content('layout/footerproject.htm')
+
+                // fine nascosto
+
+                .footer-bottom
+                    .container
+                        .row
+                            .col-md-12
+                                .footer-text
+                                    +content('layout/footercc.htm')
+
+                                .social-list
+                                    ul
+                                        li
+                                            a(href="https://www.facebook.com/AtemporaleDesign/")
+                                                i.fa.fa-facebook
+                                        li
+                                            a( href="https://twitter.com/Atemporale_D")
+                                                i.fa.fa-twitter
+                                        li
+                                            a( href="https://www.instagram.com/atemporaledesign/")
+                                                i.fa.fa-instagram
+                                        li
+                                            a( href="https://plus.google.com/+AtemporaleD/posts?hl=en")
+                                                i.fa.fa-google-plus
+                                        li
+                                            a( href="https://github.com/AtemporaleNEXT")
+                                                i.fa.fa-github
 
 
         +yield('scripts')
